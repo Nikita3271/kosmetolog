@@ -1,0 +1,31 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+{% if form != None %}
+<h1>{{ title }}</h1>
+<h3>{{ message }}</h3>
+
+<div>
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.rating.id_for_label }}">{{ form.rating.label }}:</label>
+        <div class="rating">
+            {% for radio in form.rating %}
+            <label>{{ radio }}<span class="icon">★</span></label>
+            {% endfor %}
+        </div>
+        <br><br>
+        <label for="{{ form.review.id_for_label }}">{{ form.review.label }}:</label><br>
+        {{ form.review }}<br><br>
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+{% else %}
+<br>
+<h2>Благодарим за ваш отзыв!</h2>
+<h3>Ваш отзыв:</h3>
+<ul>
+    <li><span>Оценка:</span> {{ data.rating }}</li>
+    <li><span>Отзыв:</span> {{ data.review }}</li>
+</ul>
+{% endif %}
+{% endblock %}

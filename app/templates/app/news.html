@@ -1,0 +1,29 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<h3>{{ message }}</h3>
+<br>
+ {% if user.is_superuser %}
+<a  class="btn btn-primary btn-large" href="{% url 'newpostblog' %}">Добавить статью</a>
+{% endif %}
+
+{% for post in posts %}
+
+<hr />
+
+<div class="">
+
+    {% if post.image and post.image.url != '/media/temp.jpg' %}
+    <img src="{{ post.image.url }}" alt=" Картинка статьи блога" width="200" />
+    {% endif %}
+    <h4> {{post.title}} </h4>
+
+    <h6> {{post.text | truncatechars:100 }} </h6>
+
+
+    <p> {{post.author}} </p>
+    <p><a href="{% url 'newspost' parametr=post.id %}"> Читать далее </a> </p>
+</div>
+
+{% endfor %}
+{% endblock %}

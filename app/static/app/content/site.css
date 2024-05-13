@@ -1,0 +1,120 @@
+body {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+.navbar-nav li a {
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: normal;
+    color: #2a2b2a !important; /* Переопределяем цвет, добавив !important */
+}
+.navbar-nav li a:hover {
+    color: #a18e03 !important;
+    }
+.navbar {
+    background-color: #e2dfd5; /* Замените этот цвет на тот, который вам нужен */
+    border-color: #336699; /* То же самое здесь, если требуется */
+    height: 100px;
+}
+.navbar-brand img {
+    padding-top: 15px;
+    max-width: 250px; /* Задайте максимальную ширину вашего логотипа */
+    height: auto; /* Поддерживает пропорциональное изменение размеров */
+}
+
+address {
+    font-size: 17px; /* задайте нужный размер шрифта */
+}
+.link-to-survey {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.link-to-survey:hover {
+ background-color: #45a049; /* Цвет фона при наведении */
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; /* Размер шрифта можно настроить по вашему усмотрению */
+    font-weight: normal; /* Можно установить другие значения, например, bold для более жирного шрифта */
+    line-height: 1.2; /* Межстрочный интервал для лучшей читаемости */
+    color: #333; /* Цвет шрифта */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.5;
+}
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; /* Размер шрифта можно настроить по вашему усмотрению */
+    font-weight: normal; /* Можно установить другие значения, например, bold для более жирного шрифта */
+    line-height: 1.5; /* Межстрочный интервал для лучшей читаемости */
+    color: #333; /* Цвет шрифта */
+}
+h5 {
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: #000000;
+}
+h6 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+}
